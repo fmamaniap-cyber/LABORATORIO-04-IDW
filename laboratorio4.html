@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MI LISTA DE TAREAS DE LA UNSA </title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="javascript.js" defer></script>
+</head>
+<body>
+
+    <header class="encabezado">
+        <div class="encabezado-contenido">
+            <div>
+                <p class="subtitulo">Gestor De Tareas Universitarias</p>
+                <h1>Espacio Universitario</h1>
+                
+            </div>
+          
+        </div>
+    </header>
+
+    <main>
+        <section class="bienvenida">
+            <div>
+                
+                <p>organiza tus entregas y trabajos.</p>
+            </div>
+        </section>
+
+        <section class="resumen">
+            <div class="dato dato-azul">
+                <span class="dato-icono">▤</span>
+                <div>
+                    <p>Total de tareas</p>
+                    <strong id="totalTareas">0</strong>
+                </div>
+            </div>
+
+            <div class="dato dato-naranja">
+                <span class="dato-icono">◷</span>
+                <div>
+                    <p>Por terminar</p>
+                    <strong id="totalPendientes">0</strong>
+                </div>
+            </div>
+
+            <div class="dato dato-verde">
+                <span class="dato-icono">✓</span>
+                <div>
+                    <p>Terminadas</p>
+                    <strong id="totalCompletadas">0</strong>
+                </div>
+            </div>
+        </section>
+
+        <div class="contenido">
+
+            <section class="caja formulario-caja">
+                <div class="titulo-seccion">
+                    <span class="numero-seccion">01</span>
+                    <div>
+                        <h2>Nueva tarea</h2>
+                        <p>Agrega los datos de tu trabajo.</p>
+                    </div>
+                </div>
+
+                <div id="mensaje" aria-live="polite"></div>
+
+                <form id="formulario">
+                    <label for="nombreTarea">Nombre del trabajo</label>
+                    <input type="text" id="nombreTarea"
+                           placeholder="Ej. Práctica de JavaScript" required>
+
+                    <label for="nombreCurso">Curso</label>
+                    <input type="text" id="nombreCurso"
+                           placeholder="Ej. Desarrollo Web" required>
+
+                    <label for="fechaTarea">Fecha de entrega</label>
+                    <input type="date" id="fechaTarea" required>
+
+                    <button type="submit" class="boton-agregar">
+                        + Agregar a mi lista
+                    </button>
+                </form>
+
+               
+            </section>
+
+            <section class="caja lista-caja">
+                <div class="titulo-seccion">
+                    <span class="numero-seccion">02</span>
+                    <div>
+                        <h2>Mis pendientes</h2>
+                        <p>Tus trabajos registrados.</p>
+                    </div>
+                </div>
+
+                <div class="filtro-contenedor">
+                    <label for="filtroTareas">Ver tareas:</label>
+                    <select id="filtroTareas">
+                        <option value="todas">Todas</option>
+                        <option value="pendientes">Pendientes</option>
+                        <option value="completadas">Completadas</option>
+                    </select>
+                </div>
+
+                <ul id="listaTareas"></ul>
+
+                <div id="avisoVacio" class="aviso-vacio">
+                    <span>✎</span>
+                    <p>Todavía no hay tareas.</p>
+                    <small>Agrega tu primer trabajo desde el formulario.</small>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>Organizador de Tareas </p>
+        <small>Laboratorio N.° 04 · Introducción al Desarrollo Web - Fabiola Nicole Mamani</small>
+    </footer>
+
+</body>
+</html>
